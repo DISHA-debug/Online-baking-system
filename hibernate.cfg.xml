@@ -1,17 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
- "-//Hibernate/Hibernate Configuration DTD//EN"
- "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
- 
-<hibernate-configuration> <session-factory> 
-<property name="hbm2ddl.auto">update</property> 
-<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property> 
-<property name="connection.url">jdbc:mysql://localhost:3306/ons</property> 
-<property name="connection.username">root</property> 
-<property name="connection.password">2548</property>
- <property name="connection.driver_class">com.mysql.jdbc.Driver</property> 
- <property name="show_sql">true</property>
- <mapping resource="balancee.hbm.xml"/>
-<mapping resource="newacc.hbm.xml"></mapping>
-</session-factory>
+<!DOCTYPE hibernate-configuration PUBLIC 
+	"-//Hibernate/Hibernate Configuration DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- <property name="connection.datasource">mysqlpool</property>
+		<property name="hibernate.jndi.class">weblogic.jndi.WLInitialContextFactory</property>
+		<property name="hibernate.jndi.url">t3://localhost:7001</property>
+		<property name="connection.username">weblogic</property>
+		<property name="connection.password">weblogic1</property> -->
+		
+		
+		
+	    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/ons</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">DISHA1104</property>
+	    
+		<!-- Echo all executed SQL to console -->
+	    <property name="show_sql">true</property>
+		
+		<mapping resource="login.hbm.xml"/>
+		<mapping resource="customer.hbm.xml"/>
+		<mapping resource="account.hbm.xml"/>
+		<mapping resource="transaction.hbm.xml"/>
+	</session-factory>
 </hibernate-configuration>
