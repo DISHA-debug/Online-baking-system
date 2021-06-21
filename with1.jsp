@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="ONS.Addamount"%>
+    pageEncoding="ISO-8859-1" import="ONS.withamount"%>
     <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
@@ -11,17 +11,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="u" class="ONS.deposit"></jsp:useBean> 
+<jsp:useBean id="u" class="ONS.withdraw"></jsp:useBean> 
 <jsp:setProperty property="*" name="u"></jsp:setProperty>
 
 <%
-int i = Addamount.add_amount(u);
+int i = withamount.with_amount(u);
 if(i>0)
 {
-System.out.println("Your Money is Deposited Successfully!!");
+System.out.println("Your Money is Withdrawed Successfully!!");
 }
 %>
-<jsp:include page="totalamount.jsp" />
-<%-- <jsp:include page="viewdepdetails.jsp" /> --%>
+<jsp:include page="viewwithdetails.jsp" />
 </body>
 </html>

@@ -16,11 +16,10 @@
 <sql:setDataSource var="connection" driver="com.mysql.jdbc.Driver"
 url="jdbc:mysql://localhost:3307/onlinebankingsystem" user="root"
 password="drashti@16"></sql:setDataSource> <sql:query var="display" dataSource="${connection}">
-
-SELECT SUM(deposittable. amount) AS totalprice
-FROM (SELECT amount FROM newacc
-UNION ALL
-SELECT depamount FROM deposittable) deposittable;
+select deposittable.fname,deposittable.idcard,newacc.amount as amount, deposittable.depamount as depamount, newacc.amount+deposittable.depamount as totalamount   
+ from newacc 
+ INNER join deposittable  
+ on newacc.idcard = deposittable.idcard WHERE deposittable.idcard="${param.idcard}";   
 </sql:query>
 
 <c:forEach var="table" items="${display.rows}">  
@@ -28,12 +27,14 @@ SELECT depamount FROM deposittable) deposittable;
 <table border="2">  
 <tr>
 <th style="width:5%">ID CARD NUM</th>
+<th style="width:5%">FIRST NAME</th>
 <th style="width:5%">NET AMOUNT</th>
 <th style="width:5%">DEPOSITED AMOUNT</th>
 <th style="width:5%">TOTAL AMOUNT</th>
 </tr> 
 <tr> 
 <td><c:out value="${table.idcard}"/></td>
+<td><c:out value="${table.fname}"/></td>
 <td><c:out value="${table.amount}"/></td>
 <td><c:out value="${table.depamount}"/></td>
 <td><c:out value="${table.totalamount}"/></td> 

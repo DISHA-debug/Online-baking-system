@@ -5,10 +5,10 @@
 
 
   <hibernate-mapping>
-  <class name="ONS.deposit" table="deposittable">
+  <class name="ONS.withdraw" table="deposittable">
   <id name="idcard">
   <generator class="assigned"></generator></id>
-  <property name="depamount" column="depamount" type="int"></property>
+  <property name="withdrawamount" column="withdrawamount" type="int"></property>
   <property name="totalamount" column="totalamount" type="int"></property>
   <property name="fname" column="fname" type="string"></property>
   <property name="lname" column="lname" type="string"></property>
