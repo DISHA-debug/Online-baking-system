@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="ISO-8859-1">
+<link href="style.css" rel="stylesheet" type="text/css">
+<title>ADMIN DASHBOARD</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.top-container {
+margin:0 auto;
+background:#000 url(images/globe_03.gif) 0 0 no-repeat;
+width:100%;
+height:282px;
+}
+.head h1
+{
+font:bold 44px/18px Arial, Helvetica, sans-serif;
+color:white  ;
+padding:100px 0 0 380px;
+}
+.head h2
+{
+font:bold italic 24px/18px Arial, Helvetica, sans-serif;
+color:#0EDCB3 ;
+padding:20px 0 0 380px;
+}
+.header {
+margin:0 auto;
+width:100%;
+height:60px;
+background:#F0B27A ;
+border:2px solid #282828;
+text-align:center;
+}
+.main {
+  margin-left: 350px; /* Same as the width of the sidenav */
+  }
+  
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+* {
+  box-sizing: border-box;
+}
+.footer_navigation ul li
+{
+width:80px;
+font: large 12px/30px Arial, Helvetica, sans-serif;
+color:black;
+float:left;
+}
+.footer_navigation ul li a
+{
+text-decoration:none;
+color:black;
+height:30px;
+}
+.footer_navigation ul li a:hover
+{
+text-decoration:none;
+color:#ffffff;
+height:49px;
+}
+.footer_copyright
+{
+	background:#080808 ;
+color:white;
+font: large 11px/30px Arial, Helvetica, sans-serif;
+margin:0 auto;
+text-align:center;
+}
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: transparent;
+  bottom: 100px;
+  right: 80px;
+  background-color: black;
+  color: white;
+  padding-left: 100px;
+  padding-right: 200px;
+}
+.topnav {
+  overflow: hidden;
+  background-color:#F0F3F4;
+   font-size: 20px;
+  
+}
+
+.topnav a {
+  float: left;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color:#85C1E9 ;
+  color:black;
+}
+
+.topnav a.active {
+  background-color:#48C9B0 ;
+  color:black;
+}
+
+.topnav-right {
+  float: right;
+}
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+/* Style the header */
+.headerr {
+  background-color:#FF7F50;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.headerr:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the input */
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+* {box-sizing: border-box;}
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+.month {
+  padding: 70px 30px;
+  width: 100%;
+  background: #1abc9c;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+body{
+	color:black;
+	background:#1F618D;
+}
+
+</style>
+</head>
+<body>
+
+<div class="top-container">
+<div class="head">
+	<h1>Online Banking System</h1>
+    <h2>ExtraOrdinary Services</h2>	
+
+</div>
+</div>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <div class="topnav-right">
+ <!-- <a href="loginview.jsp">USER LOGIN DETAILS</a>  -->
+    <a href="adminview.jsp">USER A/C DETAILS</a>
+    <a href="balanceview.jsp">BALANCE HISTORY</a>
+    <a href="home.jsp">LOGOUT</a>
+  </div>
+</div>
+<br>
+ <table style="width:100%; margin:right auto;"><tr align="justify">
+	<td width="60%" height="300px" valign="top" style="border-right:#666666 1px dotted;">
+<div id="myDIV" class="headerr">
+  <h2 style="margin:5px">To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Update Balance History</li>
+  <li class="checked">Set Up New account File</li>
+  <li>Let the WebApp Shine</li>
+  <li>Responsive Pages</li>
+  <li>Extra Activities</li>
+  <li>Update Offers</li>
+</ul>
+
+<script>
+// Create a "close" button and append it to each list item
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+</td>
+<td width="40%" height="300px" valign="top" style="border-right:#666666 1px dotted;">
+<div class="month">      
+  <ul>
+   <li class="next">&#10095;</li> 
+   <li class="prev">&#10094;</li>
+    <li style="color:black">
+      JUNE</li><br>
+      <li style="color:black">
+      <span style="font-size:18px">2021</span>
+    </li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+</td>
+</tr></table>  
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<!-- Footer -->
+<div class="footer_top">  
+  <div class="footer_copyright" >
+ <div class="container">
+  <div class="text-block">
+  <h4>OUR BANK SERVICES</h4>
+    <p>Our Online banking System is an electronic payment system that enables customers of a bank or other financial institution to conduct a range of financial transactions through the financial institution's Webapp.</p>
+   Copyright © Online Banking System</div>
+</div>
+		  </div>
+</div>
+</body>
+</html>

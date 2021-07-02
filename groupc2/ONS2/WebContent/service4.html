@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CONSULTANCY</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.top-container {
+margin:0 auto;
+background:#000 url(images/globe_03.gif) 0 0 no-repeat;
+width:100%;
+height:282px;
+}
+.head h1
+{
+font:bold 44px/18px Arial, Helvetica, sans-serif;
+color:white  ;
+padding:100px 0 0 380px;
+}
+.head h2
+{
+font:bold italic 24px/18px Arial, Helvetica, sans-serif;
+color:#0EDCB3 ;
+padding:20px 0 0 380px;
+}
+.header {
+margin:0 auto;
+width:100%;
+height:60px;
+background:#F0B27A ;
+border:2px solid #282828;
+text-align:center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #AAB7B8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  }
+  
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+* {
+  box-sizing: border-box;
+}
+.footer_navigation ul li
+{
+width:80px;
+font: large 12px/30px Arial, Helvetica, sans-serif;
+color:black;
+float:left;
+}
+.footer_navigation ul li a
+{
+text-decoration:none;
+color:black;
+height:30px;
+}
+.footer_navigation ul li a:hover
+{
+text-decoration:none;
+color:#ffffff;
+height:49px;
+}
+.footer_copyright
+{
+	background:#080808 ;
+color:white;
+font: large 11px/30px Arial, Helvetica, sans-serif;
+margin:0 auto;
+text-align:center;
+}
+</style>
+</head>
+<body bgcolor="#E5E7E9">
+<div id="main">
+<div class="top-container">
+<div class="head">
+	<h1>Online Banking System</h1>
+    <h2>ExtraOrdinary Services</h2>	
+
+</div>
+</div>
+
+<div class="header" id="myHeader">
+<h2>Welcome to Our Services</h2>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="service.html" target="_self">ONLINE BANKING</a>
+        	<a href="service1.html" target="_self">BANK GUARANTEE</a>
+            <a href="service2.html" target="_self">ATMs SERVICES</a>
+            <a href="service3.html" target="_self">ADVANCING OF LOANS</a>
+            <a href="service4.html" target="_self">CONSULTANCY</a>
+            <a href="home.jsp" target="_self">HOME PAGE</a>
+</div>
+
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+ <table style="width:100%; background:#FAE5D3; margin:right auto;"><tr align="justify">
+	<td width="70%" height="300px" valign="top" style="border-right:#666666 1px dotted;">
+<div class="content">
+  <h3>CONSULTANCY</h3>
+  <p>-- Modern commercial banks are large organizations. <br>
+-- They can expand their function to a consultancy business. <br>
+-- In this function, banks hire financial, legal and market experts who provide advice to customers regarding investment, industry, trade, income, tax etc..</p>
+</div>
+<br>
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/AqhgH6XTogs">
+</iframe>
+</td>
+<td width="30%" height="200px" valign="top" bgcolor="#E6B0AA" style="border-right:#666666 1px dotted;">
+<div><center><h2>OFFERS</h2></center><br>
+<img src="images/stu.PNG" style="width:100%;height:350px;"><p>The Students could get 30% Scholarship and free study materials scoring above 90%</p></img>
+<img src="images/adu.PNG" style="width:100%;height:250px;"><p>The Adultss could get different offers as per their salary</p></img>
+</div></td></tr></table>  
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+<!-- Footer -->
+<div class="footer_top">  
+  <div class="footer_copyright" >
+ <div class="container">
+  <div class="text-block">
+  <h4>OUR BANK SERVICES</h4>
+    <p>Our Online banking System is an electronic payment system that enables customers of a bank or other financial institution to conduct a range of financial transactions through the financial institution's Webapp.</p>
+   Copyright © Online Banking System</div>
+</div>
+		  </div>
+</div>
+</div>
+
+</body>
+</html>

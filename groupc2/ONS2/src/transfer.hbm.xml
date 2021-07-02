@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+
+  <hibernate-mapping>
+  <class name="ONS.transfer" table="transfer">
+  <id name="idno">
+  <generator class="assigned"></generator></id>
+  <property name="accno" column="accno" type="int"></property>
+  <property name="Tamount" column="amount" type="int"></property>
+  <property name="fname" column="fname" type="string"></property>
+  <property name="lname" column="lname" type="string"></property>
+  <property name="password" column="password" type="string"></property> 
+  </class>
+  </hibernate-mapping> 
